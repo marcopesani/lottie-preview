@@ -1,0 +1,5 @@
+<div class="list-item">
+  <a ng-if="!$ctrl.isCurrent" href="#" ng-click="$ctrl.openAnimation($event, $ctrl.animationId)">{{ $ctrl.animationId }}</a>
+  <strong ng-if="$ctrl.isCurrent">{{ $ctrl.animationId }}</strong>
+  <a href="#"  ng-click="$ctrl.deleteAnimation($event, $ctrl.animationId)">Remove</a>
+</div>

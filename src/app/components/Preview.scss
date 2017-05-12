@@ -1,28 +1,4 @@
 .preview {
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cg fill='%23000000' fill-opacity='0.08'%3E%3Cpath fill-rule='evenodd' d='M0 0h4v4H0V0zm4 4h4v4H4V4z'/%3E%3C/g%3E%3C/svg%3E");
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.instructions {
-    font-family: sans-serif;
-    padding: 20px;
-    display: block;
-    width: 150px;
-    text-align: center;
-    line-height: 1.5;
-}
-
-.preview-container {
     border: 1px dashed #FF3366;
     position: relative;
 }

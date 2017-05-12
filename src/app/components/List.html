@@ -1,1 +1,16 @@
-<div class="list">List</div>
+<div class="list">
+  <div class="list-header">
+    Animations({{ $ctrl.animationsCount }})
+    <a href="#" ng-click="$ctrl.toggleList($event)">{{ ($ctrl.showList) ? 'Hide' : 'Show' }}</a>
+    <a href="#" ng-click="$ctrl.clearAnimations($event)">Delete all</a>
+  </div>
+  <div class="list-container" ng-show="$ctrl.showList">
+    <list-item-component
+      ng-repeat="(id, animation) in $ctrl.animations"
+      is-current="$ctrl.currentAnimation === id"
+      animation-id="id"
+      on-select="$ctrl.selectAnimation(id)"
+      on-delete="$ctrl.deleteAnimation(id)">
+    </list-item-component>
+  </div>
+</div>

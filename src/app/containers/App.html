@@ -1,5 +1,14 @@
 <div>
-    <preview-component
-        animations="$ctrl.animations">
-    </preview-component>
+    <drop-component
+        on-load="$ctrl.addAnimation(animation)"
+        animations="$ctrl.animations"
+        current-animation="$ctrl.currentAnimation">
+    </drop-component>
+    <list-component
+        animations="$ctrl.animations"
+        current-animation="$ctrl.currentAnimation"
+        on-select="$ctrl.selectAnimation(id)"
+        on-delete="$ctrl.deleteAnimation(id)"
+        on-clear="$ctrl.clearAnimations()">
+    </list-component>
 </div>

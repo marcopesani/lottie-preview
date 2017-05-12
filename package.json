@@ -3,8 +3,11 @@
     "angular": "^1.6.2",
     "angular-ui-router": "1.0.0-beta.3",
     "bodymovin": "^4.6.8",
+    "immutable": "^3.8.1",
     "jquery": "^3.2.1",
-    "ngimport": "^0.6.1"
+    "ng-redux": "^3.4.0-beta.1",
+    "ngimport": "^0.6.1",
+    "uuid": "^3.0.1"
   },
   "devDependencies": {
     "@types/angular": "^1.6.6",
