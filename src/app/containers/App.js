@@ -1,6 +1,6 @@
 class AppController {
   /** @ngInject */
-  constructor($log, animationService) {
+  constructor($log, $scope, animationService) {
     this.$log = $log;
     this.animationService = animationService;
     this.animations = {};

@@ -1,10 +1,14 @@
 export default routesConfig;
 
 /** @ngInject */
-function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $logProvider) {
+function routesConfig($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
   $urlRouterProvider.otherwise('/');
-  $logProvider.debugEnabled(true);
+
+  // Optimize for production
+  $compileProvider.debugInfoEnabled(false);
+  $compileProvider.commentDirectivesEnabled(false);
+  $compileProvider.cssClassDirectivesEnabled(false);
 
   $stateProvider
     .state('app', {
