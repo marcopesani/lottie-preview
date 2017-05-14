@@ -1,6 +1,7 @@
-import './ListItem.scss';
-
 class ListItemController {
+  constructor() {
+    this.isHover = false;
+  }
   openAnimation($event, id) {
     $event.preventDefault();
 
@@ -19,7 +20,9 @@ export const ListItem = {
   controller: ListItemController,
   bindings: {
     isCurrent: '<',
+    isEven: '<',
     animationId: '<',
+    animation: '<',
     onSelect: '&',
     onDelete: '&'
   }

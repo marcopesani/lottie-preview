@@ -1,3 +1,37 @@
 .list-item {
-  background-color: #ccc;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+
+  &.even {
+    background-color: #ebebeb;
+  }
+
+  &.current {
+    background-color: #6d9ee1;
+    .list-item-name {
+      color: #fff;
+    }
+    .list-item-action {
+      color: #fff;
+    }
+  }
+}
+
+.list-item-name {
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.list-item-actions {
+  margin-left: auto;
+}
+
+.list-item-action {
+  margin-left: auto;
+  padding: 10px;
 }

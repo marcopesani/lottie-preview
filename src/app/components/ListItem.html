@@ -1,5 +1,13 @@
-<div class="list-item">
-  <a ng-if="!$ctrl.isCurrent" href="#" ng-click="$ctrl.openAnimation($event, $ctrl.animationId)">{{ $ctrl.animationId }}</a>
-  <strong ng-if="$ctrl.isCurrent">{{ $ctrl.animationId }}</strong>
-  <a href="#"  ng-click="$ctrl.deleteAnimation($event, $ctrl.animationId)">Remove</a>
+<div class="list-item"
+  ng-class="{current:$ctrl.isCurrent, even:$ctrl.isEven, hover:$ctrl.isHover}"
+  ng-mouseover="$ctrl.isHover = true"
+  ng-mouseleave="$ctrl.isHover = false">
+  <span class="list-item-name" ng-click="$ctrl.openAnimation($event, $ctrl.animationId)">
+    {{ $ctrl.animation.name }}
+  </span>
+  <div class="list-item-actions" ng-show="$ctrl.isHover">
+    <a href="#" class="list-item-action" ng-click="$ctrl.deleteAnimation($event, $ctrl.animationId)">
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    </a>
+  </div>
 </div>

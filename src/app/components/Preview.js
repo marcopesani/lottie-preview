@@ -1,6 +1,5 @@
 import angular from 'angular';
 import bodymovin from 'bodymovin';
-import './Preview.scss';
 
 export class PreviewController {
   /** @ngInject */
@@ -17,7 +16,7 @@ export class PreviewController {
     const animation = this.animations[this.currentAnimation];
     const container = angular.element('.preview');
     const config = {
-      animationData: animation,
+      animationData: animation.json,
       loop: true,
       autoplay: true,
       name: 'preview',

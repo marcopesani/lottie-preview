@@ -1,9 +1,4 @@
 <div>
-    <drop-component
-        on-load="$ctrl.addAnimation(animation)"
-        animations="$ctrl.animations"
-        current-animation="$ctrl.currentAnimation">
-    </drop-component>
     <list-component
         animations="$ctrl.animations"
         current-animation="$ctrl.currentAnimation"
@@ -11,4 +6,14 @@
         on-delete="$ctrl.deleteAnimation(id)"
         on-clear="$ctrl.clearAnimations()">
     </list-component>
+    <drop-component
+        on-load="$ctrl.addAnimation(animation)"
+        animations="$ctrl.animations"
+        current-animation="$ctrl.currentAnimation">
+    </drop-component>
+    <!-- <options-component></options-component> -->
+    <footer class="footer">
+        <span><strong>Lottie Preview</strong> 0.1-alpha -  <a href="https://github.com/marcopesani/lottie-preview">https://github.com/marcopesani/lottie-preview</a></span>
+        <span><strong>Marco Pesani</strong>: <a href="https://twitter.com/marcopesani">Twitter</a>, <a href="https://www.linkedin.com/in/marcopesani/">Linkedin</a>, <a href="https://github.com/marcopesani">Github</a></span>
+    </footer>
 </div>

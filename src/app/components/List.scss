@@ -1,8 +1,18 @@
 .list {
-    background-color: #999999;
+    background-color: #f3f3f3;
+    border-right: 1px solid #b8b8b8;
     position: absolute;
-    left: 30px;
-    bottom: 30px;
-    width: 250px;
+    left: 0px;
+    bottom: $footer-height;
+    width: $list-width;
+    top:0px;
     z-index: 20;
+}
+
+.list-header {
+   border-bottom: 1px solid #b8b8b8;
+   padding: 10px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
 }

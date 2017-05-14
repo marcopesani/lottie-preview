@@ -1,5 +1,4 @@
 import angular from 'angular';
-import './Drop.scss';
 
 export class DropController {
   /** @ngInject */
@@ -20,19 +19,22 @@ export class DropController {
 
       this
         .loadAnimation(file)
-        .then(event => {
-          this.animationLoaded(event);
+        .then(payload => {
+          this.animationLoaded(payload);
         });
     }
   }
 
-  animationLoaded(event) {
-    const string = event.target.result;
+  animationLoaded(payload) {
+    const string = payload.event.target.result;
     const json = angular.fromJson(string);
 
     // Update the model
     this.onLoad({
-      animation: json
+      animation: {
+        json,
+        name: payload.file.name
+      }
     });
   }
 
@@ -41,7 +43,8 @@ export class DropController {
     const deferred = this.$q.defer();
 
     reader.onload = event => {
-      deferred.resolve(event);
+      const payload = {file, event};
+      deferred.resolve(payload);
     };
 
     reader.readAsText(file);

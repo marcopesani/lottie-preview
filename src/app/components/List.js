@@ -1,19 +1,11 @@
-import './List.scss';
-
 class ListController {
   /** @ngInject */
   constructor() {
     this.animationsCount = 0;
-    this.showList = false;
   }
 
   $onChanges() {
     this.animationsCount = Object.keys(this.animations).length;
-  }
-
-  toggleList($event) {
-    $event.preventDefault();
-    this.showList = !this.showList;
   }
 
   selectAnimation(id) {

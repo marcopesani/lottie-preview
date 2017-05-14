@@ -1,14 +1,17 @@
 <div class="list">
   <div class="list-header">
-    Animations({{ $ctrl.animationsCount }})
-    <a href="#" ng-click="$ctrl.toggleList($event)">{{ ($ctrl.showList) ? 'Hide' : 'Show' }}</a>
-    <a href="#" ng-click="$ctrl.clearAnimations($event)">Delete all</a>
+    <h6 class="h6 header-title">Animations</h6>
+    <div class="header-actions">
+      <a class="header-action" href="#" ng-click="$ctrl.clearAnimations($event)">Delete all</a>
+    </div>
   </div>
-  <div class="list-container" ng-show="$ctrl.showList">
+  <div class="list-container">
     <list-item-component
       ng-repeat="(id, animation) in $ctrl.animations"
       is-current="$ctrl.currentAnimation === id"
-      animation-id="id"
+      animation-id="id",
+      animation="animation",
+      is-Even="$even",
       on-select="$ctrl.selectAnimation(id)"
       on-delete="$ctrl.deleteAnimation(id)">
     </list-item-component>
